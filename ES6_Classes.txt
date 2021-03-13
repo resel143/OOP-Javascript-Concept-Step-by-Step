@@ -1,0 +1,10 @@
+class Alert {
+    constructor(title){
+        this.title = title;
+        console.log('Welcome inside ES6');
+    };
+}
+
+let same = new Alert('Hi Fellas Reshul Here!');
+
+console.log(same.title);
