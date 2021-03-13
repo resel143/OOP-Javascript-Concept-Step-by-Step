@@ -1,0 +1,15 @@
+
+class Alert {
+    // create a guarding function
+    if(!(this instanceof Alert)){
+        return new Alert(title);
+    }
+    constructor(title){
+        this.title = title;
+        console.log('Welcome inside ES6');
+    };
+}
+
+let same = Alert('Hi Fellas Reshul Here!');
+
+console.log(same.title);
