@@ -1,0 +1,13 @@
+let name = 'Reshul';
+console.log(name);
+
+// knowing constructors in depth 
+
+function Alert(title){
+    this.title = title||'alert' ;
+}
+
+let same = new Alert('Kar Gaye Kaand');
+
+console.log(same.title);
+
