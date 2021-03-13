@@ -1,0 +1,29 @@
+let name = 'Reshul';
+console.log(name);
+
+// knowing constructors in depth 
+
+function Alert(title){
+    this.title = title||'alert' ;
+    // this.show = function(){
+    //     console.log('Welcome to ShowRoom');
+    // }
+}
+// method of Alert is created correctly outside using prototype 
+Alert.prototype.show = function(){
+    console.log('Welcome to ShowRoom');
+}
+
+let same = new Alert('Kar Gaye Kaand');
+
+console.log(same.title);
+console.log(same.show());
+
+// creating array of method 
+
+let areyar = [];
+for(let i=0;i<10;i++){
+    areyar.push(new Alert(i));
+}
+console.log(areyar);
+console.log(areyar.length);
