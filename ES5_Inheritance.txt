@@ -1,0 +1,12 @@
+
+function kgk(title){
+    Alert.call(this, title);
+    this.type = "Success";
+    console.log('kyu bsdk');
+}
+kgk.prototype = Object.create(Alert.prototype);
+kgk.prototype.constructor = kgk;
+var varia = new kgk('Bhosdike');
+console.log(varia);
+
+console.log(kgk.show());
