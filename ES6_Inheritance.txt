@@ -1,0 +1,13 @@
+/ understnading the inhertance in ES6
+
+class superAlert extends Alert{
+    constructor(title){
+        super(title);
+        this.type = 'Sucessfull';
+        console.log("Mar Gaya");
+    }
+}
+
+let haram = new superAlert('Kya bhai Aag laga diye ho');
+
+console.log(haram.title);
