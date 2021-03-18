@@ -1,0 +1,8 @@
+function failureAlert(title){
+    Alert.call(this,title); //ek line jo jode failureAlert bacche ko Alert pitaji se
+    this.chalajabsdk = 'Chalajabsdk';
+    console.log(`failureAlert ki uchaiyo me: ${this.title}`);
+}
+failureAlert.prototype.toString = function(){
+    console.log(`failureChild sikh raha: ${this.title}`);
+}
