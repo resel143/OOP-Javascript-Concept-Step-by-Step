@@ -1,0 +1,20 @@
+// JSX code
+
+let ele = <h1>Hello Reshul! Selena</h1>
+    
+//     let make it complicated
+    
+    let result = (<ul>
+      <li>Reshul's Estate</li>
+        <li><ul>
+          <li>Pizza</li>
+          <li>Dosa</li>
+          </ul></li>
+    </ul>)
+
+
+// BaBEl converted it into React DOM code
+
+let ele = /*#__PURE__*/React.createElement("h1", null, "Hello Reshul! Selena"); //     let make it complicated
+
+let result = /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Reshul's Estate"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, "Pizza"), /*#__PURE__*/React.createElement("li", null, "Dosa"))));
