@@ -1,0 +1,11 @@
+class failureAlert extends Alert{
+    constructor(title){
+        super(title);
+        console.log(`Failure Betta Mauj kardi : ${this.title}`);
+    }
+    // redefining toString method of Alert pitaji
+    toString(){
+        let result = super.toString();
+        console.log(`Failure ki uchaiyo me : ${this.title}`);
+    }
+}
