@@ -1,0 +1,18 @@
+const task = {
+title: "learning react"
+}
+
+function toTitleCase(title){
+return title.charAt(0).toUpperCase() + title.substr(1);
+}
+
+const element = (
+	<h2>
+  	 Reshul Wate is learning {toTitleCase(task.title)}
+   	</h2>
+);
+
+ReactDOM.render(
+element,
+  document.getElementbyId('root')
+);
