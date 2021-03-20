@@ -1,18 +1,13 @@
-const task = {
-title: "learning react"
+const task = { title: 'The React'}; 
+function toUpcase(e){
+  return e.charAt(0).toUpperCase()+e.substr(1);
 }
 
-function toTitleCase(title){
-return title.charAt(0).toUpperCase() + title.substr(1);
-}
-
-const element = (
-	<h2>
-  	 Reshul Wate is learning {toTitleCase(task.title)}
-   	</h2>
-);
-
+const element = (<h2>Reshul is known as father of {toUpcase(task.title)}</h2>);
 ReactDOM.render(
-element,
-  document.getElementbyId('root')
+  element,
+  // <React.StrictMode>
+  //   element
+  // </React.StrictMode>,
+  document.getElementById('root')
 );
