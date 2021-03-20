@@ -1,0 +1,16 @@
+function greeting(name){
+  if(name){
+    return <h2>Welcome to Hell {name}</h2>
+  }else{
+    return <h2>Welcome to Jannat {name}</h2>
+  }
+}
+const element = (<h2>Reshul is known as father of {toUpcase(task.title)}</h2>);
+ReactDOM.render(
+  // element,
+  greeting('Selena'),
+  // <React.StrictMode>
+  //   element
+  // </React.StrictMode>,
+  document.getElementById('root')
+);
