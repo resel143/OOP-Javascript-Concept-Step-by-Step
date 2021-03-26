@@ -1,0 +1,13 @@
+ const styles = {
+    innerDiv: { backgroundColor: "green", textAlign: "center",margin: "auto"},
+    outerDiv: { backgroundColor: "aquamarine", height: "500px",
+    width: "60%" }
+  }
+  const someDiv = <div style={{backgroundColor:'red'}}>InnerHTMl</div>
+  const someText = 'Reshul Selena';
+  return(
+    <div style={styles.outerDiv}> <div style={styles.innerDiv}>{someDiv}</div></div>
+  );
+}
+
+export default App;
