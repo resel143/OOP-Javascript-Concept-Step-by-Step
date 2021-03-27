@@ -1,0 +1,29 @@
+// import './custom.css';
+import React, {useState} from 'react';
+import './App.css';
+import Card from './Card.js';
+
+
+function App() {
+// area of Javascript
+
+  const [name, setName] = useState('Selena G');
+  const [showCard, noShowCard] = useState(true);
+  const changeNameHandler = (naam)=>{
+    setName(naam);
+  }
+ 
+  const toggle =()=> noShowCard(!showCard);
+  const changeInputName = (e) =>{setName(e.target.value);}
+
+  const cardMarkup = showCard? <Card name = {name} title = "Singer/ Actor" avatar="https://media.glamour.com/photos/5f568f9f9943e71084c909ec/6:7/w_1386,h_1617,c_limit/Selena%20Gomez.jpg" changeNameInside = {()=>changeNameHandler('Selena Ji')} onChangeInput={changeInputName}/> : null
+// area of JSX starts from bottom
+  return(
+    <div className="App">
+      <button className="button button1" onClick={toggle}>Toggle Card On/Off</button>
+      {cardMarkup}
+    </div>
+  );
+}
+
+export default App;
