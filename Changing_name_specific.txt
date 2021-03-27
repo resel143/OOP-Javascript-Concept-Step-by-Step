@@ -1,0 +1,68 @@
+// import './custom.css';
+import React, {useState} from 'react';
+import './App.css';
+import Card from './Card.js';
+
+
+function App() {
+// area of Javascript
+  const [cards, setCards] = useState([
+    {
+      id:'abc',
+      name: 'Selena Gomez',
+      title: "Actor",
+      avatar: "https://4.bp.blogspot.com/-ilhiZO-jiiM/WHZD4UqwXPI/AAAAAAAAEIA/QVXCSQ_yMIwxi1Zgi2U7MsZF3MX9ugvtACLcB/s1600/selena-gomez-beauty-secrets-hair.jpg"
+    },
+    {
+      id:'def',
+      name: "Reshul ki Mama",
+      title:"Singer",
+      avatar: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/selena-gomez-1548271708.jpg?crop=0.5005636978579482xw:1xh;center,top&resize=480:*"
+    },
+    {
+      id:'ghi',
+      name: "Selena W",
+      title: "Chef",
+      avatar: "https://www.beautycrew.com.au/media/24761/selena-gomez_portrait.jpg"
+    }
+  ]);
+
+  const onDeleteHandler = (e)=>{
+      const cards_copy = [...cards];
+      cards_copy.splice(e,1);
+      setCards(cards_copy);
+      console.log("cards copy:"+cards_copy);
+      console.log('cards:'+cards);
+  }
+  const changeNameHandler = (e,id)=>{
+    const cardIndex = cards.findIndex(card => card.id== id);
+    const cards_copy = [...cards];
+    cards_copy[cardIndex].name = e.target.value;
+    setCards(cards_copy);
+  }
+  
+  const cardMarkup = (
+    cards.map((card,index)=>
+      <Card key= {card.id} name = {card.name} title = {card.title} avatar={card.avatar} onDelete = {()=> onDeleteHandler(index)} changeName ={(e)=>{changeNameHandler(e,card.id)}} />
+      )
+  )
+  // const [name, setName] = useState('Selena G');
+  // const [showCard, noShowCard] = useState(true);
+  // const changeNameHandler = (naam)=>{
+  //   setName(naam);
+  // }
+ 
+  // const toggle =()=> noShowCard(!showCard);
+  // const changeInputName = (e) =>{setName(e.target.value);}
+
+  
+// area of JSX starts from bottom
+  return(
+    <div className="App">
+      <button className="button button1">Toggle Card On/Off</button>
+      {cardMarkup}
+    </div>
+  );
+}
+
+export default App;
