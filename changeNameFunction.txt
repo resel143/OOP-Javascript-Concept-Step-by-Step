@@ -1,0 +1,24 @@
+// import './custom.css';
+import React, {useState} from 'react';
+import './App.css';
+import Card from './Card.js';
+
+
+function App() {
+
+  const [name, setName] = useState('Selena G');
+
+  const changeNameHandler = (naam)=>{
+    setName(naam);
+  }
+
+
+  return(
+    <div className="App">
+      <button className="button button1" onClick={()=>changeNameHandler('Reshul Ki Mama')}>Change Name</button>
+      <Card name = {name} title = "Singer/ Actor" avatar="https://media.glamour.com/photos/5f568f9f9943e71084c909ec/6:7/w_1386,h_1617,c_limit/Selena%20Gomez.jpg" changeNameInside = {()=>changeNameHandler('Selena Ji')}/>
+    </div>
+  );
+}
+
+export default App;
